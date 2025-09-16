@@ -1,6 +1,7 @@
 # Project Details
 **Colaborators:**
-Afonso Lopes- LETI - 122613
+Afonso Lopes- LETI - 122631
+Gonçalo Batista - LETI - 122623
 
 # ⚠️ This starter is not recommended ⚠️
 
