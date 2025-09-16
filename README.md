@@ -1,6 +1,7 @@
 # Project Details
 **Colaborators:**
 Afonso Lopes- LETI - 122631
+António Moura- LETI - 122622
 Gonçalo Batista - LETI - 122623
 
 # ⚠️ This starter is not recommended ⚠️
