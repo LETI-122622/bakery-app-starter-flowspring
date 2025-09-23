@@ -1,0 +1,26 @@
+name: Notificar colaborador ao criar Pull Request
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  notify-collaborator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentar no Pull Request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const collaborators = ['LETI-122622', 'LETI-122631', 'LETI-122623', 'LETI-122638'];
+            const prNumber = context.payload.pull_request.number;
+            const repo = context.repo.repo;
+            const owner = context.repo.owner;
+            const message = collaborators.map(c => `@${c}`).join(' ') + ', um novo Pull Request foi criado! Por favor, reveja quando possível. 🙏';
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: prNumber,
+              body: message
+            });
