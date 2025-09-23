@@ -5,52 +5,116 @@ import java.util.List;
 
 import com.vaadin.starter.bakery.backend.data.entity.Product;
 
+/**
+ * Classe que encapsula os dados exibidos no dashboard da aplicação,
+ * incluindo estatísticas de entregas, vendas mensais e entregas por produto.
+ */
 public class DashboardData {
 
-	private DeliveryStats deliveryStats;
-	private List<Number> deliveriesThisMonth;
-	private List<Number> deliveriesThisYear;
-	private Number[][] salesPerMonth;
-	private LinkedHashMap<Product, Integer> productDeliveries;
+    /** Estatísticas gerais de entregas. */
+    private DeliveryStats deliveryStats;
 
-	public DeliveryStats getDeliveryStats() {
-		return deliveryStats;
-	}
+    /** Lista com o número de entregas realizadas no mês atual. */
+    private List<Number> deliveriesThisMonth;
 
-	public void setDeliveryStats(DeliveryStats deliveryStats) {
-		this.deliveryStats = deliveryStats;
-	}
+    /** Lista com o número de entregas realizadas no ano atual. */
+    private List<Number> deliveriesThisYear;
 
-	public List<Number> getDeliveriesThisMonth() {
-		return deliveriesThisMonth;
-	}
+    /** Matriz com os valores de vendas por mês. */
+    private Number[][] salesPerMonth;
 
-	public void setDeliveriesThisMonth(List<Number> deliveriesThisMonth) {
-		this.deliveriesThisMonth = deliveriesThisMonth;
-	}
+    /** Mapa de produtos e a quantidade de entregas realizadas para cada um. */
+    private LinkedHashMap<Product, Integer> productDeliveries;
 
-	public List<Number> getDeliveriesThisYear() {
-		return deliveriesThisYear;
-	}
+    /**
+     * Retorna as estatísticas de entregas.
+     *
+     * @return estatísticas de entregas
+     */
+    public DeliveryStats getDeliveryStats() {
+        return deliveryStats;
+    }
 
-	public void setDeliveriesThisYear(List<Number> deliveriesThisYear) {
-		this.deliveriesThisYear = deliveriesThisYear;
-	}
+    /**
+     * Define as estatísticas de entregas.
+     *
+     * @param deliveryStats estatísticas de entregas
+     */
+    public void setDeliveryStats(DeliveryStats deliveryStats) {
+        this.deliveryStats = deliveryStats;
+    }
 
-	public void setSalesPerMonth(Number[][] salesPerMonth) {
-		this.salesPerMonth = salesPerMonth;
-	}
+    /**
+     * Retorna a lista de entregas realizadas no mês atual.
+     *
+     * @return lista de entregas do mês
+     */
+    public List<Number> getDeliveriesThisMonth() {
+        return deliveriesThisMonth;
+    }
 
-	public Number[] getSalesPerMonth(int i) {
-		return salesPerMonth[i];
-	}
+    /**
+     * Define a lista de entregas realizadas no mês atual.
+     *
+     * @param deliveriesThisMonth lista de entregas do mês
+     */
+    public void setDeliveriesThisMonth(List<Number> deliveriesThisMonth) {
+        this.deliveriesThisMonth = deliveriesThisMonth;
+    }
 
-	public LinkedHashMap<Product, Integer> getProductDeliveries() {
-		return productDeliveries;
-	}
+    /**
+     * Retorna a lista de entregas realizadas no ano atual.
+     *
+     * @return lista de entregas do ano
+     */
+    public List<Number> getDeliveriesThisYear() {
+        return deliveriesThisYear;
+    }
 
-	public void setProductDeliveries(LinkedHashMap<Product, Integer> productDeliveries) {
-		this.productDeliveries = productDeliveries;
-	}
+    /**
+     * Define a lista de entregas realizadas no ano atual.
+     *
+     * @param deliveriesThisYear lista de entregas do ano
+     */
+    public void setDeliveriesThisYear(List<Number> deliveriesThisYear) {
+        this.deliveriesThisYear = deliveriesThisYear;
+    }
+
+    /**
+     * Define a matriz de vendas por mês.
+     *
+     * @param salesPerMonth matriz de vendas mensais
+     */
+    public void setSalesPerMonth(Number[][] salesPerMonth) {
+        this.salesPerMonth = salesPerMonth;
+    }
+
+    /**
+     * Retorna o vetor de vendas para o mês especificado.
+     *
+     * @param i índice do mês
+     * @return vetor de vendas do mês
+     */
+    public Number[] getSalesPerMonth(int i) {
+        return salesPerMonth[i];
+    }
+
+    /**
+     * Retorna o mapa de produtos e suas respectivas quantidades de entregas.
+     *
+     * @return mapa de entregas por produto
+     */
+    public LinkedHashMap<Product, Integer> getProductDeliveries() {
+        return productDeliveries;
+    }
+
+    /**
+     * Define o mapa de produtos e suas respectivas quantidades de entregas.
+     *
+     * @param productDeliveries mapa de entregas por produto
+     */
+    public void setProductDeliveries(LinkedHashMap<Product, Integer> productDeliveries) {
+        this.productDeliveries = productDeliveries;
+    }
 
 }
