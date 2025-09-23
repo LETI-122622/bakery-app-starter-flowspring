@@ -8,7 +8,7 @@ import com.vaadin.flow.data.binder.ValidationException;
  * Esta interface define o contrato para uma vista que apresenta uma lista de entidades (parte "mestre")
  * e um diálogo para visualizar ou editar uma única entidade (parte "detalhe"). O diálogo pode operar em dois modos:
  * visualização e edição. A interface prevê ainda mecanismos para mostrar notificações, mensagens de erro
- * e pedidos de confirmação ao utilizador.
+ * e pedidos de confirmação ao utilizador............
  *
  * @param <T> Tipo da entidade gerida pela vista.
  */
